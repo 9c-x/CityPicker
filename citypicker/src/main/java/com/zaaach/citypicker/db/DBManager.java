@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
+import android.util.Log;
 
 import com.zaaach.citypicker.model.City;
 
@@ -39,6 +40,9 @@ public class DBManager {
         DB_PATH = File.separator + "data"
                 + Environment.getDataDirectory().getAbsolutePath() + File.separator
                 + context.getPackageName() + File.separator + "databases" + File.separator;
+        Log.d("XFP", "DBManager: "+DB_PATH);
+        Log.d("XFP", "DBManager1: "+Environment.getDataDirectory().getAbsolutePath());
+        Log.d("XFP", "DBManager1: "+Environment.getExternalStorageDirectory().getAbsolutePath());
         copyDBFile();
     }
 

@@ -11,6 +11,8 @@ import androidx.annotation.StyleRes;
 import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Debug;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -190,7 +192,6 @@ public class CityPickerDialogFragment extends DialogFragment implements TextWatc
         }else{
             locateState = LocateState.SUCCESS;
         }
-
         dbManager = new DBManager(getActivity());
         mAllCities = dbManager.getAllCities();
         mAllCities.add(0, mLocatedCity);
